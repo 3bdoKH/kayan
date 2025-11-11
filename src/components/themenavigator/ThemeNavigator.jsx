@@ -52,7 +52,7 @@ const ThemeNavigator = () => {
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme') || 'cyan';
     applyTheme(savedTheme);
-  }, []);
+  },);
 
   const applyTheme = (themeName) => {
     const theme = themes.find(t => t.name === themeName);

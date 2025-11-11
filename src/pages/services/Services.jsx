@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Services.css';
-import { image5, image6, image7, image8, image30, image31, image32, image33, image34, image35 } from '../../utils/imports';
+import { image5, image7, image8, image30, image31, image32, image33, image34, image35 } from '../../utils/imports';
 const Services = () => {
     const [activeService, setActiveService] = useState(null);
 
