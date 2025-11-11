@@ -1,0 +1,179 @@
+# .htaccess for Tashteeb Website
+# SEO optimizations, security, and performance enhancements
+
+# Enable mod_rewrite
+RewriteEngine On
+
+# ============================================
+# SSL CONFIGURATION (allows SSL certification)
+# ============================================
+
+# Force HTTPS redirect (only after SSL certificate is installed)
+# Uncomment the following lines AFTER your SSL certificate is active
+# RewriteCond %{HTTPS} off
+# RewriteCond %{HTTP_HOST} !^localhost [NC]
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+# Allow ACME challenge for SSL certificate verification
+# This ensures Let's Encrypt and other SSL providers can verify your domain
+RewriteCond %{REQUEST_URI} ^/\.well-known/acme-challenge/
+RewriteRule ^(.*)$ - [L]
+
+# ============================================
+# REACT ROUTER CONFIGURATION
+# ============================================
+
+# Handle React Router - redirect all requests to index.html
+# Except for actual files and directories
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !^/\.well-known/
+RewriteRule . /index.html [L]
+
+# ============================================
+# SECURITY HEADERS
+# ============================================
+
+<IfModule mod_headers.c>
+    # Security headers
+    Header always set X-Content-Type-Options nosniff
+    Header always set X-Frame-Options DENY
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+    
+    # Content Security Policy (adjust as needed for your site)
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdnjs.cloudflare.com https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; connect-src 'self';"
+    
+    # HSTS (HTTP Strict Transport Security) - Enable only AFTER SSL is active
+    # Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" env=HTTPS
+</IfModule>
+
+# ============================================
+# CACHING AND PERFORMANCE
+# ============================================
+
+<IfModule mod_expires.c>
+    ExpiresActive On
+    
+    # Images
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/x-icon "access plus 1 year"
+    
+    # CSS and JavaScript
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType text/javascript "access plus 1 month"
+    
+    # Fonts
+    ExpiresByType font/woff "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+    ExpiresByType application/font-woff "access plus 1 year"
+    ExpiresByType application/font-woff2 "access plus 1 year"
+    
+    # HTML
+    ExpiresByType text/html "access plus 1 week"
+    
+    # JSON and XML
+    ExpiresByType application/json "access plus 1 week"
+    ExpiresByType application/xml "access plus 1 week"
+    ExpiresByType text/xml "access plus 1 week"
+</IfModule>
+
+# Enable gzip compression
+<IfModule mod_deflate.c>
+    # Compress HTML, CSS, JavaScript, Text, XML and fonts
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+    AddOutputFilterByType DEFLATE application/x-font
+    AddOutputFilterByType DEFLATE application/x-font-opentype
+    AddOutputFilterByType DEFLATE application/x-font-otf
+    AddOutputFilterByType DEFLATE application/x-font-truetype
+    AddOutputFilterByType DEFLATE application/x-font-ttf
+    AddOutputFilterByType DEFLATE application/x-javascript
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE font/opentype
+    AddOutputFilterByType DEFLATE font/otf
+    AddOutputFilterByType DEFLATE font/ttf
+    AddOutputFilterByType DEFLATE image/svg+xml
+    AddOutputFilterByType DEFLATE image/x-icon
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/javascript
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/xml
+</IfModule>
+
+# ============================================
+# SEO OPTIMIZATIONS
+# ============================================
+
+# Remove www prefix (choose one - www or non-www)
+# RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+# RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+# Remove trailing slash
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} (.+)/$
+RewriteRule ^(.+)/$ /$1 [R=301,L]
+
+# ============================================
+# MIME TYPES
+# ============================================
+
+<IfModule mod_mime.c>
+    # Web fonts
+    AddType application/font-woff woff
+    AddType application/font-woff2 woff2
+    AddType application/vnd.ms-fontobject eot
+    AddType application/x-font-ttf ttf
+    AddType font/opentype otf
+    
+    # JavaScript
+    AddType application/javascript js
+    AddType text/javascript js
+    
+    # JSON
+    AddType application/json json
+    
+    # Manifest
+    AddType application/manifest+json webmanifest
+</IfModule>
+
+# ============================================
+# ERROR PAGES (Optional)
+# ============================================
+
+# Custom error pages
+# ErrorDocument 404 /404.html
+# ErrorDocument 500 /500.html
+
+# ============================================
+# DENY ACCESS TO SENSITIVE FILES
+# ============================================
+
+# Deny access to .htaccess itself
+<Files .htaccess>
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Deny access to sensitive files
+<FilesMatch "\.(env|log|ini|bak|sql)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Block access to node_modules and source files
+<IfModule mod_alias.c>
+    RedirectMatch 403 /node_modules/.*
+    RedirectMatch 403 /src/.*
+    RedirectMatch 403 /\.git/.*
+</IfModule>

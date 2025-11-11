@@ -1,0 +1,195 @@
+.services-section {
+    padding: 120px 0;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    direction: rtl;
+    position: relative;
+    overflow: hidden;
+}
+
+.services-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+        radial-gradient(circle at 20% 50%, rgba(230, 126, 34, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(155, 89, 182, 0.1) 0%, transparent 50%);
+}
+
+.services-section .section-header h2,
+.services-section .section-header p {
+    color: #fff;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 40px;
+    margin-bottom: 70px;
+    position: relative;
+    z-index: 1;
+}
+
+.service-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    padding: 2px;
+    background: linear-gradient(135deg, var(--accent), #9b59b6);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-15px) scale(1.03);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+}
+
+.service-card:hover::before {
+    opacity: 1;
+}
+
+.service-image {
+    position: relative;
+    height: 240px;
+    overflow: hidden;
+}
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.service-card:hover .service-image img {
+    transform: scale(1.15) rotate(2deg);
+}
+
+.service-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(230, 126, 34, 0.8), rgba(155, 89, 182, 0.8));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.service-card:hover .service-overlay {
+    opacity: 1;
+}
+
+.service-overlay i {
+    color: #fff;
+    font-size: 4rem;
+    transform: scale(0.5) rotate(-180deg);
+    transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.service-card:hover .service-overlay i {
+    transform: scale(1) rotate(0deg);
+}
+
+.service-content {
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.service-content h3 {
+    font-size: 1.6rem;
+    margin-bottom: 18px;
+    color: #2c3e50;
+    font-weight: 800;
+}
+
+.service-content p {
+    color: #555;
+    margin-bottom: 25px;
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+.service-link {
+    display: inline-flex;
+    align-items: center;
+    color: var(--accent);
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding: 10px 20px;
+    background: rgba(230, 126, 34, 0.1);
+    border-radius: 25px;
+}
+
+.service-link i {
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.service-link:hover {
+    background: var(--accent);
+    color: white;
+    transform: translateX(-3px);
+}
+
+.service-link:hover i {
+    transform: translateX(-8px);
+}
+
+.services-cta {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 60px 50px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    z-index: 1;
+}
+
+.services-cta h3 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #fff;
+    font-weight: 800;
+}
+
+.services-cta p {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 35px;
+    font-size: 1.15rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services-cta {
+        padding: 30px;
+    }
+}
