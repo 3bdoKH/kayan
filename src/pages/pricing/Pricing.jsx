@@ -219,12 +219,116 @@ const Pricing = () => {
 
             <section className="pricing-plans-section">
                 <div className="container">
+
                     <div className="section-header">
                         <span className="section-tag">اختر ما يناسبك</span>
                         <h2>باقات التشطيب</h2>
                         <p>اختر الباقة المناسبة لاحتياجاتك</p>
                     </div>
+                    <div className="payment-terms-section">
+                        <div className="payment-terms-header">
+                            <div className="payment-icon-wrapper">
+                                <i className="fas fa-hand-holding-usd"></i>
+                            </div>
+                            <h3>شطب وانت مرتاح... واستلم على المفتاح 🏠</h3>
+                            <p className="payment-subtitle">أنظمة دفع مرنة تناسب الجميع</p>
+                        </div>
 
+                        <div className="payment-options-grid">
+                            <div className="payment-option highlight">
+                                <div className="payment-badge">الأكثر طلباً</div>
+                                <div className="payment-icon">
+                                    <i className="fas fa-calendar-alt"></i>
+                                </div>
+                                <h4>تقسيط على 24 شهر</h4>
+                                <div className="payment-details">
+                                    <div className="payment-detail-item">
+                                        <i className="fas fa-check-circle"></i>
+                                        <span>مقدم يبدأ من 30%</span>
+                                    </div>
+                                    <div className="payment-detail-item">
+                                        <i className="fas fa-check-circle"></i>
+                                        <span>تقسيط بدون فوائد نهائياً</span>
+                                    </div>
+                                    <div className="payment-detail-item">
+                                        <i className="fas fa-check-circle"></i>
+                                        <span>أطول فترة سداد حتى 24 شهر</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="payment-option">
+                                <div className="payment-icon">
+                                    <i className="fas fa-money-bill-wave"></i>
+                                </div>
+                                <h4>الدفع كاش</h4>
+                                <div className="payment-details">
+                                    <div className="payment-detail-item">
+                                        <i className="fas fa-check-circle"></i>
+                                        <span>خصم 10% على السعر الإجمالي</span>
+                                    </div>
+                                    <div className="payment-detail-item">
+                                        <i className="fas fa-check-circle"></i>
+                                        <span>دفع فوري بخصم مميز</span>
+                                    </div>
+                                    <div className="payment-detail-item special">
+                                        <i className="fas fa-star"></i>
+                                        <span>عرض خاص: مقدم 25% وخصم 15%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="payment-benefits">
+                            <h4>مميزات العمل معنا</h4>
+                            <div className="benefits-grid">
+                                <div className="benefit-item">
+                                    <i className="fas fa-handshake"></i>
+                                    <span>هنكون معاك خطوة بخطوة لحد ما نسلمك على المفتاح</span>
+                                </div>
+                                <div className="benefit-item">
+                                    <i className="fas fa-user-tie"></i>
+                                    <span>فريق عمل متكامل من المهندسين والفنيين على أعلى مستوى</span>
+                                </div>
+                                <div className="benefit-item">
+                                    <i className="fas fa-clock"></i>
+                                    <span>دقة في التنفيذ وسرعة في الأداء</span>
+                                </div>
+                                <div className="benefit-item">
+                                    <i className="fas fa-gem"></i>
+                                    <span>أفضل الخامات المستخدمة بالضمان الشامل</span>
+                                </div>
+                                <div className="benefit-item">
+                                    <i className="fas fa-search"></i>
+                                    <span>معاينة مجانية 🔥</span>
+                                </div>
+                                <div className="benefit-item">
+                                    <i className="fas fa-tags"></i>
+                                    <span>باقات مختلفة تناسب جميع الأذواق وأسعار في متناول الجميع</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="payment-contact">
+                            <p>للاستعلام والمعاينة المجانية 📲📞</p>
+                            <div className="contact-numbers">
+                                <a href="tel:01111505503" className="contact-number">
+                                    <i className="fas fa-phone"></i>
+                                    <span>01111505503</span>
+                                </a>
+                                <a href="tel:01055556363" className="contact-number">
+                                    <i className="fas fa-phone"></i>
+                                    <span>01055556363</span>
+                                </a>
+                            </div>
+                            <div className="whatsapp-contact">
+                                <a href="https://wa.me/+201111505503" className="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                                    <i className="fab fa-whatsapp"></i>
+                                    تواصل عبر واتساب
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                     <div className="pricing-grid">
                         {plans.map(plan => (
                             <div
@@ -297,6 +401,8 @@ const Pricing = () => {
                             <p>نستخدم أفضل المواد والخامات</p>
                         </div>
                     </div>
+
+
 
                     <div className="pricing-note">
                         <i className="fas fa-info-circle"></i>

@@ -346,6 +346,92 @@
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
+/* Payment Terms Highlight */
+.payment-terms-highlight {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 50px;
+    border-radius: 20px;
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.payment-highlight-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.payment-highlight-header h3 {
+    font-size: 2.2rem;
+    color: #333;
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+.payment-highlight-header p {
+    font-size: 1.2rem;
+    color: #666;
+    font-weight: 600;
+}
+
+.payment-options-compact {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.payment-compact-card {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 35px 25px;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.payment-compact-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    border-color: #667eea;
+}
+
+.payment-compact-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.payment-compact-card:hover .payment-compact-icon {
+    transform: rotate(360deg) scale(1.1);
+}
+
+.payment-compact-icon i {
+    font-size: 1.8rem;
+    color: white;
+}
+
+.payment-compact-card h4 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+.payment-compact-card p {
+    font-size: 1rem;
+    color: #666;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
 @media (max-width: 992px) {
     .pricing-grid {
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -353,6 +439,10 @@
 
     .pricing-card.recommended {
         transform: scale(1);
+    }
+
+    .payment-options-compact {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -363,5 +453,13 @@
 
     .pricing-cta {
         padding: 30px;
+    }
+
+    .payment-terms-highlight {
+        padding: 35px 25px;
+    }
+
+    .payment-highlight-header h3 {
+        font-size: 1.8rem;
     }
 }

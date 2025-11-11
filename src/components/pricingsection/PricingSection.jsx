@@ -150,6 +150,38 @@ const PricingSection = () => {
     return (
         <section className="pricing-section" id="pricing">
             <div className="container">
+                <div className="payment-terms-highlight">
+                    <div className="payment-highlight-header">
+                        <h3>شطب وانت مرتاح... واستلم على المفتاح 🏠</h3>
+                        <p>أنظمة دفع مرنة تناسب الجميع</p>
+                    </div>
+
+                    <div className="payment-options-compact">
+                        <div className="payment-compact-card">
+                            <div className="payment-compact-icon">
+                                <i className="fas fa-calendar-alt"></i>
+                            </div>
+                            <h4>تقسيط على 24 شهر</h4>
+                            <p>مقدم من 30% - بدون فوائد نهائياً</p>
+                        </div>
+
+                        <div className="payment-compact-card">
+                            <div className="payment-compact-icon">
+                                <i className="fas fa-money-bill-wave"></i>
+                            </div>
+                            <h4>خصم كاش 10%</h4>
+                            <p>عرض خاص: مقدم 25% وخصم 15%</p>
+                        </div>
+
+                        <div className="payment-compact-card">
+                            <div className="payment-compact-icon">
+                                <i className="fas fa-search"></i>
+                            </div>
+                            <h4>معاينة مجانية</h4>
+                            <p>للاستعلام: 01111505503</p>
+                        </div>
+                    </div>
+                </div>
                 <div className="section-header">
                     <h2>الأسعار</h2>
                     <p>باقات تشطيب تناسب جميع الميزانيات</p>
@@ -211,6 +243,9 @@ const PricingSection = () => {
                 <div className="pricing-note">
                     <p>* الأسعار تقريبية وقد تختلف حسب متطلبات المشروع والمواد المستخدمة</p>
                 </div>
+
+                {/* Payment Terms Highlight */}
+
 
                 <div className="pricing-cta">
                     <h3>احصل على عرض سعر مخصص</h3>
