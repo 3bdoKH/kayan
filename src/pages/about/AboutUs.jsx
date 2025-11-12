@@ -49,7 +49,7 @@ const AboutUs = () => {
     <div className="about-page">
       {/* Hero Header */}
       <div className="about-hero">
-        <div className="hero-overlay"></div>
+        <div className="about-hero-overlay"></div>
         <div className="container">
           <div className="hero-content">
             <span className="hero-badge">
