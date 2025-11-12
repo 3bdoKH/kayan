@@ -33,7 +33,7 @@ const Projects = () => {
         {
             id: 1,
             title: 'تشطيب فيلا فاخرة',
-            location: 'القاهرة',
+            location: 'الشيخ زايد',
             category: 'villas',
             type: 'luxury',
             area: '350 متر مربع',
@@ -67,7 +67,7 @@ const Projects = () => {
         {
             id: 3,
             title: 'تشطيب مكتب إداري',
-            location: 'الاسكندرية',
+            location: 'التجمع الخامس',
             category: 'offices',
             type: 'luxury',
             area: '250 متر مربع',
@@ -101,7 +101,7 @@ const Projects = () => {
         {
             id: 5,
             title: 'تشطيب فيلا متوسطة',
-            location: 'المنوفية',
+            location: 'الشروق',
             category: 'villas',
             type: 'medium',
             area: '280 متر مربع',
@@ -118,7 +118,7 @@ const Projects = () => {
         {
             id: 6,
             title: 'تشطيب شقة فاخرة',
-            location: 'كفر الشيخ',
+            location: ' الشيخ زايد',
             category: 'apartments',
             type: 'luxury',
             area: '220 متر مربع',
@@ -135,7 +135,7 @@ const Projects = () => {
         {
             id: 7,
             title: 'تشطيب مكتب هندسي',
-            location: 'القاهرة',
+            location: 'العبور',
             category: 'offices',
             type: 'medium',
             area: '150 متر مربع',
@@ -169,7 +169,7 @@ const Projects = () => {
         {
             id: 9,
             title: 'تشطيب فيلا اقتصادية',
-            location: 'اسوان',
+            location: ' التجمع الاول',
             category: 'villas',
             type: 'economic',
             area: '200 متر مربع',

@@ -59,7 +59,7 @@ const Contact = () => {
 
         // Encode message for URL
         const encodedMessage = encodeURIComponent(message);
-        const whatsappURL = `https://wa.me/+201055556363?text=${encodedMessage}`;
+        const whatsappURL = `https://wa.me/+201111505503?text=${encodedMessage}`;
 
         // Open WhatsApp
         window.open(whatsappURL, '_blank');
@@ -151,7 +151,7 @@ const Contact = () => {
                                 <i className="fab fa-facebook-f"></i>
                                 <span>Facebook</span>
                             </a>
-                            <a href="https://wa.me/+201055556363" target="_blank" rel="noopener noreferrer" className="social-btn whatsapp">
+                            <a href="https://wa.me/+201111505503" target="_blank" rel="noopener noreferrer" className="social-btn whatsapp">
                                 <i className="fab fa-whatsapp"></i>
                                 <span>WhatsApp</span>
                             </a>
@@ -278,7 +278,7 @@ const Contact = () => {
                                 </div>
                                 <h3>تواصل فوري</h3>
                                 <p>للاستفسارات العاجلة، تحدث معنا مباشرة على الواتساب</p>
-                                <a href="https://wa.me/+201055556363" target="_blank" rel="noopener noreferrer" className="whatsapp-direct-btn">
+                                <a href="https://wa.me/+201111505503" target="_blank" rel="noopener noreferrer" className="whatsapp-direct-btn">
                                     <i className="fab fa-whatsapp"></i>
                                     <span>فتح الواتساب</span>
                                 </a>
