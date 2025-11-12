@@ -66,7 +66,7 @@ const PricingSection = () => {
         {
             id: 3,
             name: 'عرض الفخامة',
-            price: '1750',
+            price: '5000',
             unit: 'جنيه / متر',
             description: 'تشطيب فخم بخامات عالية الجودة وتفاصيل دقيقة وضمانات ممتدة لمعظم البنود',
             features: [
@@ -162,15 +162,15 @@ const PricingSection = () => {
                                 <i className="fas fa-calendar-alt"></i>
                             </div>
                             <h4>تقسيط على 24 شهر</h4>
-                            <p>مقدم من 30% - بدون فوائد نهائياً</p>
+                            <p>مقدم 25% - بدون فوائد نهائياً</p>
                         </div>
 
                         <div className="payment-compact-card">
                             <div className="payment-compact-icon">
                                 <i className="fas fa-money-bill-wave"></i>
                             </div>
-                            <h4>خصم كاش 10%</h4>
-                            <p>عرض خاص: مقدم 25% وخصم 15%</p>
+                            <h4>خصم كاش 15%</h4>
+                            <p>الدفع بيكون علي دفعات مع مراحل التشطيب</p>
                         </div>
 
                         <div className="payment-compact-card">
