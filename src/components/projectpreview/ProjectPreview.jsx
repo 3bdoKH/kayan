@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './ProjectPreview.css';
-import { image10, image11, image12, image13, image28, image29 } from '../../utils/imports';
+import { preview1, preview2, preview3, preview4, preview5, image19 } from '../../utils/imports';
 const ProjectPreview = () => {
     const [activeCategory, setActiveCategory] = useState('all');
 
@@ -20,42 +20,42 @@ const ProjectPreview = () => {
             id: 1,
             title: 'تشطيب فيلا فاخرة',
             category: ['luxury', 'villas'],
-            image: image10,
+            image: preview1,
             location: 'القاهرة'
         },
         {
             id: 2,
             title: 'تصميم داخلي لشقة',
             category: ['apartments', 'economic'],
-            image: image11,
+            image: preview2,
             location: 'الإسكندرية'
         },
         {
             id: 3,
             title: 'تشطيب كامل لفيلا',
             category: ['luxury', 'villas'],
-            image: image12,
+            image: preview3,
             location: 'الإسكندرية'
         },
         {
             id: 4,
             title: 'تجديد شقة سكنية',
             category: ['apartments', 'economic'],
-            image: image13,
+            image: preview4,
             location: 'الزقازيق'
         },
         {
             id: 5,
             title: 'تصميم وتنفيذ فيلا',
             category: ['luxury', 'villas'],
-            image: image28,
+            image: preview5,
             location: 'القاهرة'
         },
         {
             id: 6,
             title: 'تشطيب شقة فاخرة',
             category: ['luxury', 'apartments'],
-            image: image29,
+            image: image19,
             location: 'الجيزة'
         }
     ];

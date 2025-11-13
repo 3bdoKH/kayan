@@ -76,6 +76,34 @@ import image76 from "../materials/images/76.jpg";
 import image77 from "../materials/images/77.jpg";
 import image78 from "../materials/images/78.jpg";
 import image79 from "../materials/images/79.jpg";
+import image80 from "../materials/images/80.jpg";
+import image81 from "../materials/images/81.jpg";
+import image82 from "../materials/images/82.jpg";
+import image83 from "../materials/images/83.jpg";
+import image84 from "../materials/images/84.jpg";
+import image85 from "../materials/images/85.jpg";
+import image86 from "../materials/images/86.jpg";
+import image87 from "../materials/images/87.jpg";
+import image88 from "../materials/images/88.jpg";
+import image89 from "../materials/images/89.jpg";
+import image90 from "../materials/images/90.jpg";
+import image91 from "../materials/images/91.jpg";
+import image92 from "../materials/images/92.jpg";
+import image93 from "../materials/images/93.jpg";
+import image94 from "../materials/images/94.jpg";
+import image95 from "../materials/images/95.jpg";
+import image96 from "../materials/images/96.jpg";
+import image97 from "../materials/images/97.jpg";
+import image98 from "../materials/images/98.jpg";
+import image99 from "../materials/images/99.jpg";
+import image100 from "../materials/images/100.jpg";
+import image101 from "../materials/images/101.jpg";
+import image102 from "../materials/images/102.jpg";
+import preview1 from "../materials/images/prev.jpg";
+import preview2 from "../materials/images/prev-2.jpg";
+import preview3 from "../materials/images/prev-3.jpg";
+import preview4 from "../materials/images/prev-4.jpg";
+import preview5 from "../materials/images/prev-5.jpg";
 import video1 from "../materials/vids/1.mp4";
 import video2 from "../materials/vids/2.mp4";
 import video3 from "../materials/vids/3.mp4";
@@ -166,6 +194,34 @@ export {
   image77,
   image78,
   image79,
+  image80,
+  image81,
+  image82,
+  image83,
+  image84,
+  image85,
+  image86,
+  image87,
+  image88,
+  image89,
+  image90,
+  image91,
+  image92,
+  image93,
+  image94,
+  image95,
+  image96,
+  image97,
+  image98,
+  image99,
+  image100,
+  image101,
+  image102,
+  preview1,
+  preview2,
+  preview3,
+  preview4,
+  preview5,
   video1,
   video2,
   video3,
