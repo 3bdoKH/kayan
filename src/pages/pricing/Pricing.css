@@ -120,10 +120,15 @@
 }
 
 .pricing-grid {
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+    gap: 30px; */
     margin-bottom: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
 }
 
 .pricing-card {
@@ -135,6 +140,7 @@
     position: relative;
     border: 2px solid transparent;
     --plan-color: #667eea;
+    max-width: 350px;
 }
 
 .pricing-card:hover {
