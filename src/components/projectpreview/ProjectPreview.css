@@ -4,6 +4,7 @@
     direction: rtl;
     position: relative;
     overflow: hidden;
+    text-align: center;
 }
 
 .projects-section::before {

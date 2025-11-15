@@ -146,7 +146,7 @@ const Projects = () => {
         {
             id: 2,
             title: 'تصميم داخلي لشقة',
-            location: 'القاهرة',
+            location: 'المقطم',
             category: 'apartments',
             type: 'medium',
             area: '180 متر مربع',
@@ -172,9 +172,7 @@ const Projects = () => {
             duration: '4 أشهر',
             description: 'تشطيب مكتب إداري بتصميم عصري يجمع بين الأناقة والعملية.',
             images: [
-                image89,
                 image90,
-                image91,
                 image92,
             ],
             video: video3,
@@ -183,7 +181,7 @@ const Projects = () => {
         {
             id: 4,
             title: 'تجديد شقة سكنية',
-            location: 'الجيزة',
+            location: 'حدائق الاهرام',
             category: 'apartments',
             type: 'economic',
             area: '120 متر مربع',
@@ -218,7 +216,7 @@ const Projects = () => {
         {
             id: 6,
             title: 'تشطيب شقة فاخرة',
-            location: ' الشيخ زايد',
+            location: 'الشيخ زايد',
             category: 'apartments',
             type: 'luxury',
             area: '220 متر مربع',
@@ -253,7 +251,7 @@ const Projects = () => {
         {
             id: 8,
             title: 'تشطيب شقة اقتصادية',
-            location: 'الاسكندرية',
+            location: 'اسكندريه',
             category: 'apartments',
             type: 'economic',
             area: '100 متر مربع',
@@ -292,7 +290,7 @@ const Projects = () => {
         {
             id: 10,
             title: 'تشطيب فيلا ',
-            location: 'العين السخنة',
+            location: 'اسكندريه',
             category: 'villas',
             type: 'luxury',
             area: '420 متر مربع',
@@ -302,7 +300,6 @@ const Projects = () => {
                 image36,
                 image38,
                 image39,
-                image42,
             ],
             video: video10,
             featured: true
@@ -310,7 +307,7 @@ const Projects = () => {
         {
             id: 11,
             title: 'تصميم مكتب شركات ناشئة',
-            location: 'مدينة نصر',
+            location: 'جسر السويس',
             category: 'offices',
             type: 'medium',
             area: '280 متر مربع',
@@ -327,7 +324,7 @@ const Projects = () => {
         {
             id: 14,
             title: 'تطوير مركز تجاري',
-            location: '6 أكتوبر',
+            location: 'حدائق الاهرام',
             category: 'offices',
             type: 'medium',
             area: '520 متر مربع',
@@ -345,7 +342,7 @@ const Projects = () => {
         {
             id: 15,
             title: 'تجديد شقة كلاسيكية',
-            location: 'وسط البلد',
+            location: 'القطاميه',
             category: 'apartments',
             type: 'luxury',
             area: '210 متر مربع',
@@ -363,14 +360,14 @@ const Projects = () => {
         {
             id: 16,
             title: 'تشطيب فيلا حدائق',
-            location: 'الرحاب',
+            location: 'المندره',
             category: 'villas',
             type: 'medium',
             area: '320 متر مربع',
             duration: '5 أشهر',
             description: 'تنسيق داخلي وخارجي لفيلا مع حدائق مدمجة ومساحات معيشة مفتوحة.',
             images: [
-                image43,
+                image42,
                 image44,
                 image45,
                 image46,
@@ -381,7 +378,7 @@ const Projects = () => {
         {
             id: 18,
             title: 'تشطيب شقق فندقية',
-            location: 'القاهرة الجديدة',
+            location: 'التجمع الخامس',
             category: 'apartments',
             type: 'luxury',
             area: '260 متر مربع',
@@ -399,7 +396,7 @@ const Projects = () => {
         {
             id: 19,
             title: 'مجمع عيادات طبية',
-            location: 'المهندسين',
+            location: 'المعادي',
             category: 'offices',
             type: 'medium',
             area: '360 متر مربع',
@@ -416,7 +413,7 @@ const Projects = () => {
         {
             id: 20,
             title: 'تشطيب شقة ذكية',
-            location: 'مدينتي',
+            location: 'المقطم',
             category: 'apartments',
             type: 'luxury',
             area: '190 متر مربع',
@@ -433,7 +430,7 @@ const Projects = () => {
         {
             id: 22,
             title: 'مركز تدريب مهني',
-            location: 'حلوان',
+            location: 'جسر السويس',
             category: 'offices',
             type: 'economic',
             area: '280 متر مربع',
@@ -452,7 +449,7 @@ const Projects = () => {
         {
             id: 23,
             title: 'تشطيب شقة ',
-            location: 'الإسكندرية',
+            location: 'اسكندريه',
             category: 'apartments',
             type: 'economic',
             area: '110 متر مربع',
@@ -485,7 +482,7 @@ const Projects = () => {
         {
             id: 28,
             title: 'تشطيب شقة فندقية اقتصادية',
-            location: 'العجوزة',
+            location: 'المنتزه',
             category: 'apartments',
             type: 'economic',
             area: '95 متر مربع',
@@ -503,7 +500,7 @@ const Projects = () => {
         {
             id: 30,
             title: 'تشطيب فيلا ',
-            location: 'سانت كاترين',
+            location: 'المقطم',
             category: 'villas',
             type: 'luxury',
             area: '340 متر مربع',
@@ -519,7 +516,7 @@ const Projects = () => {
         {
             id: 31,
             title: 'مركز أعمال مشترك',
-            location: 'القاهرة الجديدة',
+            location: 'التجمع الخامس',
             category: 'offices',
             type: 'medium',
             area: '295 متر مربع',
