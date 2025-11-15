@@ -2,11 +2,20 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Projects.css';
 import {
+    image1,
+    image2,
+    image3,
+    image4,
+    image5,
+    image6,
+    image7,
+    image8,
+    image9,
     image10,
-    image11,
     image12,
     image13,
     image14,
+    image15,
     image16,
     image17,
     image18,
@@ -26,7 +35,6 @@ import {
     image32,
     image33,
     image34,
-    image35,
     image36,
     image37,
     image38,
@@ -35,15 +43,16 @@ import {
     image41,
     image42,
     image43,
-    image50,
-    image51,
+    image44,
+    image45,
+    image46,
+    image47,
     image52,
     image53,
     image54,
-    image55,
-    image56,
     image57,
-    image58,
+    image60,
+    image61,
     image62,
     image63,
     image64,
@@ -53,21 +62,28 @@ import {
     image68,
     image69,
     image70,
+    image71,
+    image72,
+    image73,
     image74,
     image75,
     image76,
-    image77,
     image78,
     image79,
+    image80,
+    image81,
+    image82,
     image83,
     image84,
-    image85,
+    image86,
+    image87,
+    image89,
+    image90,
+    image91,
     image92,
-    image93,
-    image94,
-    image98,
-    image99,
-    image100,
+    image95,
+    image96,
+    image97,
     image101,
     image102,
     video1,
@@ -79,7 +95,7 @@ import {
     video7,
     video8,
     video9,
-    video10
+    video10,
 } from '../../utils/imports';
 const Projects = () => {
     // Scroll to top on page load
@@ -119,9 +135,10 @@ const Projects = () => {
             duration: '6 أشهر',
             description: 'تشطيب فيلا فاخرة بالكامل بأحدث التصميمات العصرية وأجود الخامات.',
             images: [
-                image10,
-                image11,
-                image12
+                image1,
+                image2,
+                image4,
+                image5,
             ],
             video: video1,
             featured: true
@@ -136,9 +153,11 @@ const Projects = () => {
             duration: '3 أشهر',
             description: 'تصميم وتنفيذ ديكور داخلي لشقة سكنية بتصميم عصري وألوان متناسقة.',
             images: [
-                image13,
-                image14,
-                image16,
+                image3,
+                image6,
+                image7,
+                image8,
+                image9,
             ],
             video: video2,
             featured: false
@@ -153,9 +172,10 @@ const Projects = () => {
             duration: '4 أشهر',
             description: 'تشطيب مكتب إداري بتصميم عصري يجمع بين الأناقة والعملية.',
             images: [
-                image17,
-                image18,
-                image19,
+                image89,
+                image90,
+                image91,
+                image92,
             ],
             video: video3,
             featured: true
@@ -170,9 +190,9 @@ const Projects = () => {
             duration: '2 أشهر',
             description: 'تجديد شقة سكنية قديمة وتحويلها إلى تصميم عصري بتكلفة اقتصادية.',
             images: [
-                image20,
-                image21,
-                image22,
+                image10,
+                image12,
+                image13,
             ],
             video: video4,
             featured: false
@@ -187,9 +207,10 @@ const Projects = () => {
             duration: '5 أشهر',
             description: 'تشطيب فيلا بتصميم عصري وخامات عالية الجودة وبتكلفة متوسطة.',
             images: [
-                image23,
-                image24,
-                image25,
+                image14,
+                image15,
+                image16,
+                image18,
             ],
             video: video5,
             featured: false
@@ -204,9 +225,10 @@ const Projects = () => {
             duration: '4 أشهر',
             description: 'تشطيب شقة فاخرة بتصميم عصري وخامات مستوردة عالية الجودة.',
             images: [
-                image26,
-                image27,
-                image28,
+                image17,
+                image19,
+                image20,
+                image21,
             ],
             video: video6,
             featured: true
@@ -221,9 +243,9 @@ const Projects = () => {
             duration: '3 أشهر',
             description: 'تشطيب مكتب هندسي بتصميم عملي يناسب طبيعة العمل الهندسي.',
             images: [
-                image29,
-                image30,
-                image31,
+                image83,
+                image86,
+                image87,
             ],
             video: video7,
             featured: false
@@ -238,9 +260,12 @@ const Projects = () => {
             duration: '2 أشهر',
             description: 'تشطيب شقة بتصميم عصري وبتكلفة اقتصادية مناسبة للميزانيات المحدودة.',
             images: [
+                image27,
+                image28,
+                image29,
+                image30,
+                image31,
                 image32,
-                image33,
-                image34,
             ],
             video: video8,
             featured: false
@@ -255,9 +280,11 @@ const Projects = () => {
             duration: '4 أشهر',
             description: 'تشطيب فيلا بتصميم عصري وبتكلفة اقتصادية مناسبة للميزانيات المحدودة.',
             images: [
-                image35,
-                image36,
-                image37,
+                image22,
+                image23,
+                image24,
+                image25,
+                image26,
             ],
             video: video9,
             featured: false
@@ -272,9 +299,10 @@ const Projects = () => {
             duration: '7 أشهر',
             description: 'تشطيب فيلا على البحر بتفاصيل فاخرة تراعي الإضاءة الطبيعية والإطلالة البحرية.',
             images: [
+                image36,
                 image38,
                 image39,
-                image40,
+                image42,
             ],
             video: video10,
             featured: true
@@ -289,9 +317,9 @@ const Projects = () => {
             duration: '4 أشهر',
             description: 'مساحات عمل عصرية مرنة مع غرف اجتماعات تفاعلية تلائم الشركات الناشئة.',
             images: [
-                image41,
-                image42,
-                image43,
+                image95,
+                image96,
+                image97,
             ],
             video: null,
             featured: true
@@ -306,9 +334,10 @@ const Projects = () => {
             duration: '5 أشهر',
             description: 'إعادة تصميم مركز تجاري مع مناطق عرض مرنة ومسارات حركة واضحة للزوار.',
             images: [
-                image50,
-                image51,
-                image52,
+                image73,
+                image80,
+                image81,
+                image82,
             ],
             video: null,
             featured: false
@@ -323,9 +352,10 @@ const Projects = () => {
             duration: '3 أشهر',
             description: 'مزج الطابع الكلاسيكي مع تفاصيل عصرية للحفاظ على روح الشقة التاريخية.',
             images: [
-                image53,
-                image54,
-                image55,
+                image33,
+                image37,
+                image40,
+                image41,
             ],
             video: null,
             featured: false
@@ -340,9 +370,10 @@ const Projects = () => {
             duration: '5 أشهر',
             description: 'تنسيق داخلي وخارجي لفيلا مع حدائق مدمجة ومساحات معيشة مفتوحة.',
             images: [
-                image56,
-                image57,
-                image58,
+                image43,
+                image44,
+                image45,
+                image46,
             ],
             video: null,
             featured: false
@@ -357,9 +388,10 @@ const Projects = () => {
             duration: '4 أشهر',
             description: 'تشطيب شقق فندقية بأثاث مخصص وحلول تخزين ذكية لضمان راحة النزلاء.',
             images: [
-                image62,
-                image63,
-                image64,
+                image34,
+                image52,
+                image53,
+                image54,
             ],
             video: null,
             featured: false
@@ -374,7 +406,7 @@ const Projects = () => {
             duration: '5 أشهر',
             description: 'تصميم مجمع طبي متكامل يحقق أعلى معايير التعقيم وراحة المرضى.',
             images: [
-                image65,
+                image47,
                 image66,
                 image67,
             ],
@@ -391,9 +423,9 @@ const Projects = () => {
             duration: '3 أشهر',
             description: 'تشطيب شقة مدمج بأنظمة المنزل الذكي والتحكم في الإضاءة والصوت.',
             images: [
-                image68,
-                image69,
-                image70,
+                image57,
+                image60,
+                image61,
             ],
             video: null,
             featured: true
@@ -408,9 +440,11 @@ const Projects = () => {
             duration: '4 أشهر',
             description: 'تهيئة مركز تدريب بتجهيزات متخصصة وقاعات متعددة الاستخدام.',
             images: [
-                image74,
-                image75,
-                image76,
+                image62,
+                image63,
+                image64,
+                image65,
+                image68,
             ],
             video: null,
             featured: false
@@ -425,9 +459,9 @@ const Projects = () => {
             duration: '2 أشهر',
             description: 'تشطيب شقة عملية للشباب تعتمد على حلول التخزين الذكية والأثاث المتعدد الاستخدام.',
             images: [
-                image77,
-                image78,
-                image79,
+                image69,
+                image70,
+                image71,
             ],
             video: null,
             featured: false
@@ -444,7 +478,6 @@ const Projects = () => {
             images: [
                 image83,
                 image84,
-                image85,
             ],
             video: null,
             featured: false
@@ -459,9 +492,10 @@ const Projects = () => {
             duration: '2 أشهر',
             description: 'تشطيب شقة فندقية تلائم الرحلات القصيرة مع عزل صوتي كامل.',
             images: [
-                image92,
-                image93,
-                image94,
+                image75,
+                image76,
+                image78,
+                image79,
             ],
             video: null,
             featured: false
@@ -476,9 +510,8 @@ const Projects = () => {
             duration: '6 أشهر',
             description: 'تصميم فيلا في منطقة جبلية مع مراعاة العزل الحراري والخامات المقاومة للطقس.',
             images: [
-                image98,
-                image99,
-                image100,
+                image72,
+                image74,
             ],
             video: null,
             featured: true

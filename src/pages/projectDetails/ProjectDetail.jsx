@@ -1,7 +1,102 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import './ProjectDetail.css';
-import { image10, image11, image12, image13, image14, image16, image17, image18, image19, image20, image21, image22, image23, image24, image25, image26, image27, image28, image29, image30, image31, image32, image33, image34, image35, image36, image37, image1, image2, image3, image4, image5, image6, image7, image8, image9, image38, image39, image40, image41, image42, image43, image44, image45, image46, image47, image48, image49, image50, image51, image52, image53, image54, image55, image56, image57, image58, image59, image60, image61, image62, image63, image64, image65, image66, image67, image68, image69, image70, image71, image72, image73, image74, image75, image76, image77, image78, image79, video1, video2, video3, video4, video5, video6, video7, video8, video9 } from '../../utils/imports';
+import {
+    image1,
+    image2,
+    image3,
+    image4,
+    image5,
+    image6,
+    image7,
+    image8,
+    image9,
+    image10,
+    image12,
+    image13,
+    image14,
+    image15,
+    image16,
+    image17,
+    image18,
+    image19,
+    image20,
+    image21,
+    image22,
+    image23,
+    image24,
+    image25,
+    image26,
+    image27,
+    image28,
+    image29,
+    image30,
+    image31,
+    image32,
+    image33,
+    image34,
+    image36,
+    image37,
+    image38,
+    image39,
+    image40,
+    image41,
+    image42,
+    image43,
+    image44,
+    image45,
+    image46,
+    image47,
+    image52,
+    image53,
+    image54,
+    image57,
+    image60,
+    image61,
+    image62,
+    image63,
+    image64,
+    image65,
+    image66,
+    image67,
+    image68,
+    image69,
+    image70,
+    image71,
+    image72,
+    image73,
+    image74,
+    image75,
+    image76,
+    image78,
+    image79,
+    image80,
+    image81,
+    image82,
+    image83,
+    image84,
+    image86,
+    image87,
+    image89,
+    image90,
+    image91,
+    image92,
+    image95,
+    image96,
+    image97,
+    image101,
+    image102,
+    video1,
+    video2,
+    video3,
+    video4,
+    video5,
+    video6,
+    video7,
+    video8,
+    video9,
+    video10,
+} from '../../utils/imports';
 
 const ProjectDetail = () => {
     const { id } = useParams();
@@ -16,13 +111,13 @@ const ProjectDetail = () => {
         {
             id: 1,
             title: 'تشطيب فيلا فاخرة',
-            location: 'القاهرة',
+            location: 'الشيخ زايد',
             category: 'villas',
             type: 'luxury',
             area: '350 متر مربع',
             duration: '6 أشهر',
             description: 'تشطيب فيلا فاخرة بالكامل بأحدث التصميمات العصرية وأجود الخامات.',
-            detailedDescription: `تشطيب فيلا فاخرة بالكامل بأحدث التصميمات العصرية وأجود الخامات. تم تنفيذ المشروع على مساحة 350 متر مربع في منطقة راقية بالقاهرة. استغرق المشروع 6 أشهر للتنفيذ الكامل من البداية وحتى التسليم.
+            detailedDescription: `تشطيب فيلا فاخرة بالكامل بأحدث التصميمات العصرية وأجود الخامات. تم تنفيذ المشروع على مساحة 350 متر مربع في الشيخ زايد. استغرق المشروع 6 أشهر للتنفيذ الكامل من البداية وحتى التسليم.
 
             تضمنت أعمال التشطيب:
             - تصميم وتنفيذ الديكورات الداخلية بالكامل
@@ -34,15 +129,10 @@ const ProjectDetail = () => {
             - تركيب أبواب خشبية مصنوعة يدويًا
             - تنسيق الحديقة الخارجية`,
             images: [
-                image10,
-                image11,
-                image12,
                 image1,
                 image2,
-                image3,
                 image4,
                 image5,
-                image6,
             ],
             video: video1,
             featured: true
@@ -67,15 +157,11 @@ const ProjectDetail = () => {
             - تصميم وتنفيذ خزائن الحائط والمطبخ
             - تنسيق الأثاث والإكسسوارات`,
             images: [
-                image13,
-                image14,
-                image16,
-                image38,
-                image39,
-                image40,
-                image41,
-                image42,
-                image43,
+                image3,
+                image6,
+                image7,
+                image8,
+                image9,
             ],
             video: video2,
             featured: false
@@ -83,13 +169,13 @@ const ProjectDetail = () => {
         {
             id: 3,
             title: 'تشطيب مكتب إداري',
-            location: 'الاسكندرية',
+            location: 'التجمع الخامس',
             category: 'offices',
             type: 'luxury',
             area: '250 متر مربع',
             duration: '4 أشهر',
             description: 'تشطيب مكتب إداري بتصميم عصري يجمع بين الأناقة والعملية.',
-            detailedDescription: `تشطيب مكتب إداري بتصميم عصري يجمع بين الأناقة والعملية. تم تنفيذ المشروع على مساحة 250 متر مربع في الاسكندرية. استغرق المشروع 4 أشهر للتنفيذ الكامل.
+            detailedDescription: `تشطيب مكتب إداري بتصميم عصري يجمع بين الأناقة والعملية. تم تنفيذ المشروع على مساحة 250 متر مربع في التجمع الخامس. استغرق المشروع 4 أشهر للتنفيذ الكامل.
 
             تضمنت أعمال التشطيب:
             - تقسيم المساحات بشكل عملي يناسب طبيعة العمل
@@ -100,16 +186,10 @@ const ProjectDetail = () => {
             - تصميم منطقة استقبال تعكس هوية الشركة
             - تنفيذ أعمال العزل الصوتي للقاعات الرئيسية`,
             images: [
-                image17,
-                image18,
-                image19,
-                image44,
-                image45,
-                image46,
-                image47,
-                image48,
-                image49,
-                image50,
+                image89,
+                image90,
+                image91,
+                image92,
             ],
             video: video3,
             featured: true
@@ -134,16 +214,9 @@ const ProjectDetail = () => {
             - تجديد المطبخ والحمامات
             - تركيب إضاءة موفرة للطاقة`,
             images: [
-                image20,
-                image21,
-                image22,
-                image51,
-                image52,
-                image53,
-                image54,
-                image55,
-                image56,
-                image57,
+                image10,
+                image12,
+                image13,
             ],
             video: video4,
             featured: false
@@ -151,13 +224,13 @@ const ProjectDetail = () => {
         {
             id: 5,
             title: 'تشطيب فيلا متوسطة',
-            location: 'المنوفية',
+            location: 'الشروق',
             category: 'villas',
             type: 'medium',
             area: '280 متر مربع',
             duration: '5 أشهر',
             description: 'تشطيب فيلا بتصميم عصري وخامات عالية الجودة وبتكلفة متوسطة.',
-            detailedDescription: `تشطيب فيلا بتصميم عصري وخامات عالية الجودة وبتكلفة متوسطة. تم تنفيذ المشروع على مساحة 280 متر مربع في المنوفية. استغرق المشروع 5 أشهر للتنفيذ الكامل.
+            detailedDescription: `تشطيب فيلا بتصميم عصري وخامات عالية الجودة وبتكلفة متوسطة. تم تنفيذ المشروع على مساحة 280 متر مربع في الشروق. استغرق المشروع 5 أشهر للتنفيذ الكامل.
 
             تضمنت أعمال التشطيب:
             - تصميم وتنفيذ الواجهة الخارجية
@@ -168,16 +241,10 @@ const ProjectDetail = () => {
             - دهانات بألوان عصرية متناسقة
             - تنسيق الحديقة الخارجية`,
             images: [
-                image23,
-                image24,
-                image25,
-                image58,
-                image59,
-                image60,
-                image61,
-                image62,
-                image63,
-                image64,
+                image14,
+                image15,
+                image16,
+                image18,
             ],
             video: video5,
             featured: false
@@ -185,13 +252,13 @@ const ProjectDetail = () => {
         {
             id: 6,
             title: 'تشطيب شقة فاخرة',
-            location: 'كفر الشيخ',
+            location: ' الشيخ زايد',
             category: 'apartments',
             type: 'luxury',
             area: '220 متر مربع',
             duration: '4 أشهر',
             description: 'تشطيب شقة فاخرة بتصميم عصري وخامات مستوردة عالية الجودة.',
-            detailedDescription: `تشطيب شقة فاخرة بتصميم عصري وخامات مستوردة عالية الجودة. تم تنفيذ المشروع على مساحة 220 متر مربع في كفر الشيخ. استغرق المشروع 4 أشهر للتنفيذ الكامل.
+            detailedDescription: `تشطيب شقة فاخرة بتصميم عصري وخامات مستوردة عالية الجودة. تم تنفيذ المشروع على مساحة 220 متر مربع في الشيخ زايد. استغرق المشروع 4 أشهر للتنفيذ الكامل.
 
             تضمنت أعمال التشطيب:
             - تصميم داخلي فريد يعكس ذوق العميل
@@ -202,17 +269,10 @@ const ProjectDetail = () => {
             - تصميم وتنفيذ مطبخ فاخر بتقنيات حديثة
             - تركيب أبواب خشبية مصنوعة يدويًا`,
             images: [
-                image26,
-                image27,
-                image28,
-                image65,
-                image66,
-                image67,
-                image68,
-                image69,
-                image70,
-                image71,
-                image72,
+                image17,
+                image19,
+                image20,
+                image21,
             ],
             video: video6,
             featured: true
@@ -220,13 +280,13 @@ const ProjectDetail = () => {
         {
             id: 7,
             title: 'تشطيب مكتب هندسي',
-            location: 'القاهرة',
+            location: 'العبور',
             category: 'offices',
             type: 'medium',
             area: '150 متر مربع',
             duration: '3 أشهر',
             description: 'تشطيب مكتب هندسي بتصميم عملي يناسب طبيعة العمل الهندسي.',
-            detailedDescription: `تشطيب مكتب هندسي بتصميم عملي يناسب طبيعة العمل الهندسي. تم تنفيذ المشروع على مساحة 150 متر مربع في القاهرة. استغرق المشروع 3 أشهر للتنفيذ الكامل.
+            detailedDescription: `تشطيب مكتب هندسي بتصميم عملي يناسب طبيعة العمل الهندسي. تم تنفيذ المشروع على مساحة 150 متر مربع في العبور. استغرق المشروع 3 أشهر للتنفيذ الكامل.
 
             تضمنت أعمال التشطيب:
             - تقسيم المساحة بشكل يناسب العمل الهندسي
@@ -237,16 +297,9 @@ const ProjectDetail = () => {
             - تصميم منطقة عرض للمشاريع والنماذج
             - تركيب أنظمة تخزين وأرشفة للمخططات`,
             images: [
-                image29,
-                image30,
-                image31,
-                image73,
-                image74,
-                image75,
-                image76,
-                image77,
-                image78,
-                image79,
+                image83,
+                image86,
+                image87,
             ],
             video: video7,
             featured: false
@@ -271,12 +324,12 @@ const ProjectDetail = () => {
             - تصميم وتنفيذ مطبخ عملي بتكلفة مناسبة
             - تركيب أبواب خشبية اقتصادية`,
             images: [
+                image27,
+                image28,
+                image29,
+                image30,
+                image31,
                 image32,
-                image33,
-                image34,
-                image7,
-                image8,
-                image9,
             ],
             video: video8,
             featured: false
@@ -284,13 +337,13 @@ const ProjectDetail = () => {
         {
             id: 9,
             title: 'تشطيب فيلا اقتصادية',
-            location: 'اسوان',
+            location: ' التجمع الاول',
             category: 'villas',
             type: 'economic',
             area: '200 متر مربع',
             duration: '4 أشهر',
             description: 'تشطيب فيلا بتصميم عصري وبتكلفة اقتصادية مناسبة للميزانيات المحدودة.',
-            detailedDescription: `تشطيب فيلا بتصميم عصري وبتكلفة اقتصادية مناسبة للميزانيات المحدودة. تم تنفيذ المشروع على مساحة 200 متر مربع في اسوان. استغرق المشروع 4 أشهر للتنفيذ الكامل.
+            detailedDescription: `تشطيب فيلا بتصميم عصري وبتكلفة اقتصادية مناسبة للميزانيات المحدودة. تم تنفيذ المشروع على مساحة 200 متر مربع في التجمع الاول. استغرق المشروع 4 أشهر للتنفيذ الكامل.
 
             تضمنت أعمال التشطيب:
             - تصميم واجهة بسيطة وعملية
@@ -301,11 +354,397 @@ const ProjectDetail = () => {
             - دهانات بألوان عصرية
             - تنسيق بسيط للحديقة الخارجية`,
             images: [
-                image35,
-                image36,
-                image37,
+                image22,
+                image23,
+                image24,
+                image25,
+                image26,
             ],
             video: video9,
+            featured: false
+        },
+        {
+            id: 10,
+            title: 'تشطيب فيلا ',
+            location: 'العين السخنة',
+            category: 'villas',
+            type: 'luxury',
+            area: '420 متر مربع',
+            duration: '7 أشهر',
+            description: 'تشطيب فيلا على البحر بتفاصيل فاخرة تراعي الإضاءة الطبيعية والإطلالة البحرية.',
+            detailedDescription: `تشطيب فيلا على البحر بتفاصيل فاخرة تراعي الإضاءة الطبيعية والإطلالة البحرية. تم تنفيذ المشروع على مساحة 420 متر مربع في العين السخنة. استغرق المشروع 7 أشهر للتنفيذ الكامل.
+
+            تضمنت أعمال التشطيب:
+            - تصميم يعتمد على الإطلالة البحرية
+            - استخدام خامات مقاومة للرطوبة والملوحة
+            - تصميم نوافذ كبيرة للإضاءة الطبيعية
+            - تركيب أرضيات فاخرة مناسبة للمناطق الساحلية
+            - تصميم مساحات خارجية مفتوحة
+            - تنفيذ أعمال العزل الحراري والرطوبة
+            - تنسيق حدائق ومسابح`,
+            images: [
+                image36,
+                image38,
+                image39,
+                image42,
+            ],
+            video: video10,
+            featured: true
+        },
+        {
+            id: 11,
+            title: 'تصميم مكتب شركات ناشئة',
+            location: 'مدينة نصر',
+            category: 'offices',
+            type: 'medium',
+            area: '280 متر مربع',
+            duration: '4 أشهر',
+            description: 'مساحات عمل عصرية مرنة مع غرف اجتماعات تفاعلية تلائم الشركات الناشئة.',
+            detailedDescription: `مساحات عمل عصرية مرنة مع غرف اجتماعات تفاعلية تلائم الشركات الناشئة. تم تنفيذ المشروع على مساحة 280 متر مربع في مدينة نصر. استغرق المشروع 4 أشهر للتنفيذ الكامل.
+
+            تضمنت أعمال التشطيب:
+            - تصميم مساحات عمل مرنة قابلة للتعديل
+            - غرف اجتماعات تفاعلية مجهزة بأحدث التقنيات
+            - مناطق استراحة وترفيه للعاملين
+            - شبكات إنترنت وأجهزة متطورة
+            - إضاءة طبيعية وصناعية متكاملة
+            - تصميم يعزز الإبداع والتعاون
+            - مساحات تخزين ذكية`,
+            images: [
+                image95,
+                image96,
+                image97,
+            ],
+            video: null,
+            featured: true
+        },
+        {
+            id: 14,
+            title: 'تطوير مركز تجاري',
+            location: '6 أكتوبر',
+            category: 'offices',
+            type: 'medium',
+            area: '520 متر مربع',
+            duration: '5 أشهر',
+            description: 'إعادة تصميم مركز تجاري مع مناطق عرض مرنة ومسارات حركة واضحة للزوار.',
+            detailedDescription: `إعادة تصميم مركز تجاري مع مناطق عرض مرنة ومسارات حركة واضحة للزوار. تم تنفيذ المشروع على مساحة 520 متر مربع في 6 أكتوبر. استغرق المشروع 5 أشهر للتنفيذ الكامل.
+
+            تضمنت أعمال التشطيب:
+            - تصميم مناطق عرض مرنة قابلة للتعديل
+            - مسارات حركة واضحة ومنظمة للزوار
+            - إضاءة مميزة لإبراز المنتجات
+            - تصميم منطقة استقبال وخدمة عملاء
+            - أنظمة عرض وتخزين ذكية
+            - تصميم يعزز تجربة التسوق
+            - أعمال كهرباء وإنترنت متكاملة`,
+            images: [
+                image73,
+                image80,
+                image81,
+                image82,
+            ],
+            video: null,
+            featured: false
+        },
+        {
+            id: 15,
+            title: 'تجديد شقة كلاسيكية',
+            location: 'وسط البلد',
+            category: 'apartments',
+            type: 'luxury',
+            area: '210 متر مربع',
+            duration: '3 أشهر',
+            description: 'مزج الطابع الكلاسيكي مع تفاصيل عصرية للحفاظ على روح الشقة التاريخية.',
+            detailedDescription: `مزج الطابع الكلاسيكي مع تفاصيل عصرية للحفاظ على روح الشقة التاريخية. تم تنفيذ المشروع على مساحة 210 متر مربع في وسط البلد. استغرق المشروع 3 أشهر للتنفيذ الكامل.
+
+            تضمنت أعمال التجديد:
+            - الحفاظ على العناصر المعمارية التاريخية
+            - دمج تفاصيل عصرية مع الطابع الكلاسيكي
+            - ترميم الأعمال الخشبية والجبسية القديمة
+            - تحديث شبكات الكهرباء والسباكة
+            - اختيار ألوان وأثاث متناسق مع الطابع
+            - إبراز التفاصيل المعمارية المميزة
+            - تنسيق إضاءة تعزز الجو الكلاسيكي`,
+            images: [
+                image33,
+                image37,
+                image40,
+                image41,
+            ],
+            video: null,
+            featured: false
+        },
+        {
+            id: 16,
+            title: 'تشطيب فيلا حدائق',
+            location: 'الرحاب',
+            category: 'villas',
+            type: 'medium',
+            area: '320 متر مربع',
+            duration: '5 أشهر',
+            description: 'تنسيق داخلي وخارجي لفيلا مع حدائق مدمجة ومساحات معيشة مفتوحة.',
+            detailedDescription: `تنسيق داخلي وخارجي لفيلا مع حدائق مدمجة ومساحات معيشة مفتوحة. تم تنفيذ المشروع على مساحة 320 متر مربع في الرحاب. استغرق المشروع 5 أشهر للتنفيذ الكامل.
+
+            تضمنت أعمال التشطيب:
+            - تصميم مساحات معيشة مفتوحة على الحديقة
+            - تنسيق حدائق مدمجة مع التصميم الداخلي
+            - استخدام زجاج كبير للربط بين الداخل والخارج
+            - تصميم مساحات خارجية للاسترخاء
+            - أعمال التشطيب الداخلي الكاملة
+            - تنسيق إضاءة داخلية وخارجية متكاملة
+            - تصميم مسارات ومساحات خضراء`,
+            images: [
+                image43,
+                image44,
+                image45,
+                image46,
+            ],
+            video: null,
+            featured: false
+        },
+        {
+            id: 18,
+            title: 'تشطيب شقق فندقية',
+            location: 'القاهرة الجديدة',
+            category: 'apartments',
+            type: 'luxury',
+            area: '260 متر مربع',
+            duration: '4 أشهر',
+            description: 'تشطيب شقق فندقية بأثاث مخصص وحلول تخزين ذكية لضمان راحة النزلاء.',
+            detailedDescription: `تشطيب شقق فندقية بأثاث مخصص وحلول تخزين ذكية لضمان راحة النزلاء. تم تنفيذ المشروع على مساحة 260 متر مربع في القاهرة الجديدة. استغرق المشروع 4 أشهر للتنفيذ الكامل.
+
+            تضمنت أعمال التشطيب:
+            - تصميم أثاث مخصص يناسب المساحات
+            - حلول تخزين ذكية ومبتكرة
+            - تصميم يضمن الراحة والرفاهية
+            - استخدام خامات فاخرة سهلة الصيانة
+            - تصميم مطابخ وخدمات متكاملة
+            - إضاءة متعددة المستويات
+            - تنسيق ألوان هادئة ومريحة`,
+            images: [
+                image34,
+                image52,
+                image53,
+                image54,
+            ],
+            video: null,
+            featured: false
+        },
+        {
+            id: 19,
+            title: 'مجمع عيادات طبية',
+            location: 'المهندسين',
+            category: 'offices',
+            type: 'medium',
+            area: '360 متر مربع',
+            duration: '5 أشهر',
+            description: 'تصميم مجمع طبي متكامل يحقق أعلى معايير التعقيم وراحة المرضى.',
+            detailedDescription: `تصميم مجمع طبي متكامل يحقق أعلى معايير التعقيم وراحة المرضى. تم تنفيذ المشروع على مساحة 360 متر مربع في المهندسين. استغرق المشروع 5 أشهر للتنفيذ الكامل.
+
+            تضمنت أعمال التشطيب:
+            - تصميم يلبي معايير التعقيم الطبية
+            - تقسيم المساحات حسب التخصصات
+            - استخدام خامات مقاومة للبكتيريا
+            - تصميم مناطق انتظار مريحة
+            - أنظمة تهوية وتعقيم متطورة
+            - إضاءة طبية مناسبة
+            - تصميم يضمن الخصوصية والراحة`,
+            images: [
+                image47,
+                image66,
+                image67,
+            ],
+            video: null,
+            featured: false
+        },
+        {
+            id: 20,
+            title: 'تشطيب شقة ذكية',
+            location: 'مدينتي',
+            category: 'apartments',
+            type: 'luxury',
+            area: '190 متر مربع',
+            duration: '3 أشهر',
+            description: 'تشطيب شقة مدمج بأنظمة المنزل الذكي والتحكم في الإضاءة والصوت.',
+            detailedDescription: `تشطيب شقة مدمج بأنظمة المنزل الذكي والتحكم في الإضاءة والصوت. تم تنفيذ المشروع على مساحة 190 متر مربع في مدينتي. استغرق المشروع 3 أشهر للتنفيذ الكامل.
+
+            تضمنت أعمال التشطيب:
+            - تركيب أنظمة المنزل الذكي المتكاملة
+            - التحكم في الإضاءة والصوت عن بُعد
+            - أنظمة أمان ومراقبة ذكية
+            - تكييف وتهوية ذكية
+            - تصميم يدمج التقنية مع الأناقة
+            - استخدام خامات عصرية فاخرة
+            - تصميم يسهل إدارة المنزل`,
+            images: [
+                image57,
+                image60,
+                image61,
+            ],
+            video: null,
+            featured: true
+        },
+        {
+            id: 22,
+            title: 'مركز تدريب مهني',
+            location: 'حلوان',
+            category: 'offices',
+            type: 'economic',
+            area: '280 متر مربع',
+            duration: '4 أشهر',
+            description: 'تهيئة مركز تدريب بتجهيزات متخصصة وقاعات متعددة الاستخدام.',
+            detailedDescription: `تهيئة مركز تدريب بتجهيزات متخصصة وقاعات متعددة الاستخدام. تم تنفيذ المشروع على مساحة 280 متر مربع في حلوان. استغرق المشروع 4 أشهر للتنفيذ الكامل.
+
+            تضمنت أعمال التشطيب:
+            - تصميم قاعات تدريب متعددة الاستخدام
+            - تجهيزات متخصصة للتدريب
+            - أنظمة عرض صوتية ومرئية
+            - تصميم مساحات عمل جماعية
+            - إضاءة مناسبة للتعلم
+            - أنظمة تهوية مناسبة
+            - تصميم يسهل التفاعل والتعلم`,
+            images: [
+                image62,
+                image63,
+                image64,
+                image65,
+                image68,
+            ],
+            video: null,
+            featured: false
+        },
+        {
+            id: 23,
+            title: 'تشطيب شقة ',
+            location: 'الإسكندرية',
+            category: 'apartments',
+            type: 'economic',
+            area: '110 متر مربع',
+            duration: '2 أشهر',
+            description: 'تشطيب شقة عملية للشباب تعتمد على حلول التخزين الذكية والأثاث المتعدد الاستخدام.',
+            detailedDescription: `تشطيب شقة عملية للشباب تعتمد على حلول التخزين الذكية والأثاث المتعدد الاستخدام. تم تنفيذ المشروع على مساحة 110 متر مربع في الإسكندرية. استغرق المشروع شهرين للتنفيذ الكامل.
+
+            تضمنت أعمال التشطيب:
+            - حلول تخزين ذكية ومبتكرة
+            - أثاث متعدد الاستخدام يوفر المساحة
+            - تصميم عملي يناسب احتياجات الشباب
+            - استخدام خامات عصرية بتكلفة مناسبة
+            - تصميم يضفي الاتساع على المساحات
+            - إضاءة عصرية وموفرة للطاقة
+            - تنسيق ألوان شبابية وحيوية`,
+            images: [
+                image69,
+                image70,
+                image71,
+            ],
+            video: null,
+            featured: false
+        },
+        {
+            id: 25,
+            title: 'مركز خدمات هندسية',
+            location: 'المعادى',
+            category: 'offices',
+            type: 'medium',
+            area: '310 متر مربع',
+            duration: '4 أشهر',
+            description: 'تجهيز مركز خدمات هندسية مع مناطق استقبال حديثة ومختبرات تصميم.',
+            detailedDescription: `تجهيز مركز خدمات هندسية مع مناطق استقبال حديثة ومختبرات تصميم. تم تنفيذ المشروع على مساحة 310 متر مربع في المعادى. استغرق المشروع 4 أشهر للتنفيذ الكامل.
+
+            تضمنت أعمال التشطيب:
+            - تصميم مناطق استقبال حديثة
+            - مختبرات تصميم مجهزة
+            - مساحات عمل متخصصة
+            - أنظمة عرض وتخزين للمشاريع
+            - إضاءة مناسبة للعمل الهندسي
+            - شبكات كهرباء وإنترنت متطورة
+            - تصميم يعزز الإبداع والابتكار`,
+            images: [
+                image83,
+                image84,
+            ],
+            video: null,
+            featured: false
+        },
+        {
+            id: 28,
+            title: 'تشطيب شقة فندقية اقتصادية',
+            location: 'العجوزة',
+            category: 'apartments',
+            type: 'economic',
+            area: '95 متر مربع',
+            duration: '2 أشهر',
+            description: 'تشطيب شقة فندقية تلائم الرحلات القصيرة مع عزل صوتي كامل.',
+            detailedDescription: `تشطيب شقة فندقية تلائم الرحلات القصيرة مع عزل صوتي كامل. تم تنفيذ المشروع على مساحة 95 متر مربع في العجوزة. استغرق المشروع شهرين للتنفيذ الكامل.
+
+            تضمنت أعمال التشطيب:
+            - عزل صوتي كامل للراحة
+            - تصميم عملي للمساحات الصغيرة
+            - استخدام خامات سهلة الصيانة
+            - تصميم يضمن الخصوصية
+            - إضاءة مريحة ومناسبة
+            - أثاث عملي ومريح
+            - تنسيق ألوان هادئة`,
+            images: [
+                image75,
+                image76,
+                image78,
+                image79,
+            ],
+            video: null,
+            featured: false
+        },
+        {
+            id: 30,
+            title: 'تشطيب فيلا ',
+            location: 'سانت كاترين',
+            category: 'villas',
+            type: 'luxury',
+            area: '340 متر مربع',
+            duration: '6 أشهر',
+            description: 'تصميم فيلا في منطقة جبلية مع مراعاة العزل الحراري والخامات المقاومة للطقس.',
+            detailedDescription: `تصميم فيلا في منطقة جبلية مع مراعاة العزل الحراري والخامات المقاومة للطقس. تم تنفيذ المشروع على مساحة 340 متر مربع في سانت كاترين. استغرق المشروع 6 أشهر للتنفيذ الكامل.
+
+            تضمنت أعمال التشطيب:
+            - عزل حراري متقدم للمناطق الجبلية
+            - استخدام خامات مقاومة للطقس
+            - تصميم يتناسب مع البيئة الجبلية
+            - أنظمة تدفئة مناسبة
+            - تصميم نوافذ مقاومة للرياح
+            - تنسيق خارجي متناسق مع الطبيعة
+            - أعمال تشطيب داخلية فاخرة`,
+            images: [
+                image72,
+                image74,
+            ],
+            video: null,
+            featured: true
+        },
+        {
+            id: 31,
+            title: 'مركز أعمال مشترك',
+            location: 'القاهرة الجديدة',
+            category: 'offices',
+            type: 'medium',
+            area: '295 متر مربع',
+            duration: '4 أشهر',
+            description: 'تهيئة مساحات عمل مشتركة مرنة مع مناطق استراحة حديثة ومرافق اجتماعات.',
+            detailedDescription: `تهيئة مساحات عمل مشتركة مرنة مع مناطق استراحة حديثة ومرافق اجتماعات. تم تنفيذ المشروع على مساحة 295 متر مربع في القاهرة الجديدة. استغرق المشروع 4 أشهر للتنفيذ الكامل.
+
+            تضمنت أعمال التشطيب:
+            - تصميم مساحات عمل مشتركة مرنة
+            - مناطق استراحة حديثة ومريحة
+            - مرافق اجتماعات مجهزة
+            - شبكات إنترنت وأجهزة متطورة
+            - إضاءة طبيعية وصناعية متكاملة
+            - تصميم يعزز التعاون والإنتاجية
+            - مساحات تخزين وخدمات مشتركة`,
+            images: [
+                image101,
+                image102,
+                image38,
+            ],
+            video: null,
             featured: false
         }
     ], []);
@@ -544,24 +983,34 @@ const ProjectDetail = () => {
                     <div className="project-navigation">
                         <div className="container">
                             <div className="nav-buttons">
-                                {project.id > 1 && (
-                                    <Link to={`/projects/${project.id - 1}`} className="nav-button prev">
-                                        <i className="fas fa-arrow-right"></i>
-                                        <span>المشروع السابق</span>
-                                    </Link>
-                                )}
+                                {(() => {
+                                    const currentIndex = projects.findIndex(p => p.id === project.id);
+                                    const prevProject = currentIndex > 0 ? projects[currentIndex - 1] : null;
+                                    const nextProject = currentIndex < projects.length - 1 ? projects[currentIndex + 1] : null;
 
-                                <Link to="/projects" className="nav-button all">
-                                    <i className="fas fa-th-large"></i>
-                                    <span>كل المشاريع</span>
-                                </Link>
+                                    return (
+                                        <>
+                                            {prevProject && (
+                                                <Link to={`/projects/${prevProject.id}`} className="nav-button prev">
+                                                    <i className="fas fa-arrow-right"></i>
+                                                    <span>المشروع السابق</span>
+                                                </Link>
+                                            )}
 
-                                {project.id < projects.length && (
-                                    <Link to={`/projects/${project.id + 1}`} className="nav-button next">
-                                        <span>المشروع التالي</span>
-                                        <i className="fas fa-arrow-left"></i>
-                                    </Link>
-                                )}
+                                            <Link to="/projects" className="nav-button all">
+                                                <i className="fas fa-th-large"></i>
+                                                <span>كل المشاريع</span>
+                                            </Link>
+
+                                            {nextProject && (
+                                                <Link to={`/projects/${nextProject.id}`} className="nav-button next">
+                                                    <span>المشروع التالي</span>
+                                                    <i className="fas fa-arrow-left"></i>
+                                                </Link>
+                                            )}
+                                        </>
+                                    );
+                                })()}
                             </div>
                         </div>
                     </div>

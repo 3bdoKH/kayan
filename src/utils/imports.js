@@ -12,6 +12,7 @@ import image11 from "../materials/images/11.jpg";
 import image12 from "../materials/images/12.jpg";
 import image13 from "../materials/images/13.jpg";
 import image14 from "../materials/images/14.jpg";
+import image15 from "../materials/images/15.jpg";
 import image16 from "../materials/images/16.jpg";
 import image17 from "../materials/images/17.jpg";
 import image18 from "../materials/images/18.jpg";
@@ -130,6 +131,7 @@ export {
   image12,
   image13,
   image14,
+  image15,
   image16,
   image17,
   image18,
