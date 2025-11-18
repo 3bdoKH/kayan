@@ -246,7 +246,7 @@ const Pricing = () => {
                                 <div className="payment-details">
                                     <div className="payment-detail-item">
                                         <i className="fas fa-check-circle"></i>
-                                        <span>مقدم يبدأ من 30%</span>
+                                        <span>مقدم يبدأ من 25%</span>
                                     </div>
                                     <div className="payment-detail-item">
                                         <i className="fas fa-check-circle"></i>

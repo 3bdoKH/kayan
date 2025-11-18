@@ -159,7 +159,7 @@
 
 .hero-content p {
     font-size: 1.5rem;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     margin-top: 35px;
     text-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
     line-height: 1.9;
@@ -168,6 +168,82 @@
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.hero-warranty {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.warranty-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 30px;
+    background: linear-gradient(135deg, rgba(52, 152, 219, 0.2), rgba(41, 128, 185, 0.3));
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(52, 152, 219, 0.5);
+    border-radius: 50px;
+    box-shadow: 0 10px 30px rgba(52, 152, 219, 0.3),
+        0 0 20px rgba(52, 152, 219, 0.2);
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    position: relative;
+    overflow: hidden;
+}
+
+.warranty-badge::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.6s ease;
+}
+
+.warranty-badge:hover::before {
+    left: 100%;
+}
+
+.warranty-badge:hover {
+    transform: translateY(-3px) scale(1.05);
+    border-color: rgba(52, 152, 219, 0.8);
+    box-shadow: 0 15px 40px rgba(52, 152, 219, 0.5),
+        0 0 30px rgba(52, 152, 219, 0.4);
+}
+
+.warranty-icon {
+    width: 28px;
+    height: 28px;
+    color: #3498db;
+    stroke-width: 2.5;
+    filter: drop-shadow(0 2px 8px rgba(52, 152, 219, 0.6));
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 0.9;
+    }
+}
+
+.warranty-text {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    letter-spacing: 0.5px;
 }
 
 .hero-logo {
@@ -366,7 +442,21 @@
 
     .hero-content p {
         font-size: 1.15rem;
-        margin-bottom: 40px;
+        margin-bottom: 25px;
+    }
+
+    .warranty-badge {
+        padding: 12px 20px;
+        gap: 10px;
+    }
+
+    .warranty-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .warranty-text {
+        font-size: 0.95rem;
     }
 
     .hero-buttons {
@@ -395,5 +485,19 @@
 
     .hero-content p {
         font-size: 1rem;
+    }
+
+    .warranty-badge {
+        padding: 10px 16px;
+        gap: 8px;
+    }
+
+    .warranty-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .warranty-text {
+        font-size: 0.85rem;
     }
 }

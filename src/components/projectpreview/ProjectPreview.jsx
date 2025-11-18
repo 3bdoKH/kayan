@@ -21,14 +21,14 @@ const ProjectPreview = () => {
             title: 'تشطيب فيلا فاخرة',
             category: ['luxury', 'villas'],
             image: preview1,
-            location: 'القاهرة'
+            location: 'التجمع الخامس'
         },
         {
             id: 2,
             title: 'تصميم داخلي لشقة',
             category: ['apartments', 'economic'],
             image: preview2,
-            location: 'الإسكندرية'
+            location: 'الشيخ زايد'
         },
         {
             id: 3,
@@ -42,21 +42,21 @@ const ProjectPreview = () => {
             title: 'تجديد شقة سكنية',
             category: ['apartments', 'economic'],
             image: preview4,
-            location: 'الزقازيق'
+            location: 'الشروق'
         },
         {
             id: 5,
             title: 'تصميم وتنفيذ فيلا',
             category: ['luxury', 'villas'],
             image: preview5,
-            location: 'القاهرة'
+            location: 'المقطم'
         },
         {
             id: 6,
             title: 'تشطيب شقة فاخرة',
             category: ['luxury', 'apartments'],
             image: image19,
-            location: 'الجيزة'
+            location: 'التجمع الاول'
         }
     ];
 
