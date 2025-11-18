@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Hero.css';
 import hero from '../../materials/images/hero.jpg'
+import logo from '../../materials/images/logo-1.png'
 const Hero = () => {
 
     return (
@@ -14,8 +15,11 @@ const Hero = () => {
             </div>
 
             <div className="hero-content">
-                <h1>كيان</h1>
-                <p>كيان للتشطيبات والديكورات والمقاولات العموميه</p>
+                {/* <h1>كيان</h1>
+                <p>كيان للتشطيبات والديكورات والمقاولات العموميه</p> */}
+                <div className="hero-logo">
+                    <img src={logo} alt="logo" />
+                </div>
                 <div className="hero-buttons">
                     <Link to="/services" className="btn btn-primary">اعرف أكثر</Link>
                     <Link to="/pricing" className="btn btn-secondary">اعرض الأسعار</Link>
