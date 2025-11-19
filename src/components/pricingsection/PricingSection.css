@@ -59,6 +59,7 @@
     background: linear-gradient(90deg, var(--accent-color), var(--accent-color));
     opacity: 0;
     transition: opacity 0.3s ease;
+    z-index: -1;
 }
 
 .pricing-card:hover {
