@@ -18,10 +18,26 @@ const Blogs = () => {
         const fetchBlogs = async () => {
             try {
                 setLoading(true);
-                const response = await fetch('https://winchelmohandes-furniture.online/api/blog');
+                setError(null);
+
+                const controller = new AbortController();
+                const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 second timeout
+
+                const response = await fetch('https://winchelmohandes-furniture.online/api/blog', {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json',
+                    },
+                    mode: 'cors',
+                    credentials: 'omit',
+                    signal: controller.signal
+                });
+
+                clearTimeout(timeoutId);
 
                 if (!response.ok) {
-                    throw new Error('فشل في تحميل المقالات');
+                    throw new Error(`فشل في تحميل المقالات (${response.status})`);
                 }
 
                 const data = await response.json();
@@ -33,7 +49,13 @@ const Blogs = () => {
                     throw new Error('فشل في تحميل المقالات');
                 }
             } catch (err) {
-                setError(err.message);
+                if (err.name === 'AbortError') {
+                    setError('انتهت مهلة الاتصال. يرجى المحاولة مرة أخرى.');
+                } else if (err.message.includes('Failed to fetch') || err.message.includes('NetworkError')) {
+                    setError('فشل الاتصال بالخادم. يرجى التحقق من اتصالك بالإنترنت أو إعدادات CORS.');
+                } else {
+                    setError(err.message || 'حدث خطأ غير متوقع');
+                }
                 console.error('Error fetching blogs:', err);
             } finally {
                 setLoading(false);

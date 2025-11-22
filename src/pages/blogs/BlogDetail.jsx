@@ -20,11 +20,29 @@ const BlogDetail = () => {
                 setLoading(true);
                 setError(null);
 
+                const fetchOptions = {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json',
+                    },
+                    mode: 'cors',
+                    credentials: 'omit',
+                };
+
                 // First, fetch all blogs to find the one with matching slug
-                const blogsResponse = await fetch('https://winchelmohandes-furniture.online/api/blog');
+                const controller1 = new AbortController();
+                const timeoutId1 = setTimeout(() => controller1.abort(), 10000);
+
+                const blogsResponse = await fetch('https://winchelmohandes-furniture.online/api/blog', {
+                    ...fetchOptions,
+                    signal: controller1.signal
+                });
+
+                clearTimeout(timeoutId1);
 
                 if (!blogsResponse.ok) {
-                    throw new Error('فشل في تحميل المقالات');
+                    throw new Error(`فشل في تحميل المقالات (${blogsResponse.status})`);
                 }
 
                 const blogsData = await blogsResponse.json();
@@ -41,10 +59,18 @@ const BlogDetail = () => {
                 }
 
                 // Now fetch the full blog post by ID
-                const blogResponse = await fetch(`https://winchelmohandes-furniture.online/api/blog/${foundBlog.id}`);
+                const controller2 = new AbortController();
+                const timeoutId2 = setTimeout(() => controller2.abort(), 10000);
+
+                const blogResponse = await fetch(`https://winchelmohandes-furniture.online/api/blog/${foundBlog.id}`, {
+                    ...fetchOptions,
+                    signal: controller2.signal
+                });
+
+                clearTimeout(timeoutId2);
 
                 if (!blogResponse.ok) {
-                    throw new Error('فشل في تحميل المقال');
+                    throw new Error(`فشل في تحميل المقال (${blogResponse.status})`);
                 }
 
                 const blogData = await blogResponse.json();
@@ -55,7 +81,13 @@ const BlogDetail = () => {
                     throw new Error('فشل في تحميل المقال');
                 }
             } catch (err) {
-                setError(err.message);
+                if (err.name === 'AbortError') {
+                    setError('انتهت مهلة الاتصال. يرجى المحاولة مرة أخرى.');
+                } else if (err.message.includes('Failed to fetch') || err.message.includes('NetworkError')) {
+                    setError('فشل الاتصال بالخادم. يرجى التحقق من اتصالك بالإنترنت أو إعدادات CORS.');
+                } else {
+                    setError(err.message || 'حدث خطأ غير متوقع');
+                }
                 console.error('Error fetching blog:', err);
             } finally {
                 setLoading(false);
