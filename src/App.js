@@ -16,6 +16,8 @@ import ProjectDetail from "./pages/projectDetails/ProjectDetail";
 import Contact from "./pages/contact/Contact";
 import AboutUs from "./pages/about/AboutUs";
 import OffersPage from "./pages/offers/OffersPage";
+import Blogs from "./pages/blogs/Blogs";
+import BlogDetail from "./pages/blogs/BlogDetail";
 
 function App() {
   return (
@@ -31,6 +33,8 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/offers" element={<OffersPage />} />
+          <Route path="/blogs" element={<Blogs />} />
+          <Route path="/blogs/:slug" element={<BlogDetail />} />
         </Routes>
         <Footer />
         <FloatingContacts />

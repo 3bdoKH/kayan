@@ -49,9 +49,9 @@ const Navbar = () => {
                         <li className={location.pathname === '/pricing' ? 'active' : ''}>
                             <Link to="/pricing">الأسعار</Link>
                         </li>
-                        {/* <li className={location.pathname === '/offers' ? 'active' : ''}>
-                            <Link to="/offers">العروض</Link>
-                        </li> */}
+                        <li className={location.pathname === '/blogs' ? 'active' : ''}>
+                            <Link to="/blogs">المدونة</Link>
+                        </li>
                         <li className={location.pathname === '/projects' ? 'active' : ''}>
                             <Link to="/projects">معرض الأعمال</Link>
                         </li>
