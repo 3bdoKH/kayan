@@ -18,29 +18,29 @@ const Blogs = () => {
         const fetchBlogs = async () => {
             try {
                 setLoading(true);
-                setError(null);
+                const apiUrl = 'https://winchelmohandes-furniture.online/api/blog';
 
+                // Add timeout to prevent hanging
                 const controller = new AbortController();
                 const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 second timeout
 
-                const response = await fetch('https://winchelmohandes-furniture.online/api/blog', {
-                    method: 'GET',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Accept': 'application/json',
-                    },
+                const response = await fetch(apiUrl, {
                     mode: 'cors',
-                    credentials: 'omit',
-                    signal: controller.signal
+                    signal: controller.signal,
+                    headers: {
+                        'Accept': 'application/json',
+                    }
                 });
 
                 clearTimeout(timeoutId);
+                console.log('Response status:', response.data);
 
                 if (!response.ok) {
                     throw new Error(`فشل في تحميل المقالات (${response.status})`);
                 }
 
                 const data = await response.json();
+                console.log('Response data:', data);
 
                 if (data.success) {
                     setBlogs(data.data || []);
@@ -50,11 +50,9 @@ const Blogs = () => {
                 }
             } catch (err) {
                 if (err.name === 'AbortError') {
-                    setError('انتهت مهلة الاتصال. يرجى المحاولة مرة أخرى.');
-                } else if (err.message.includes('Failed to fetch') || err.message.includes('NetworkError')) {
-                    setError('فشل الاتصال بالخادم. يرجى التحقق من اتصالك بالإنترنت أو إعدادات CORS.');
+                    setError('انتهت مهلة الطلب. يرجى التحقق من الاتصال بالإنترنت والمحاولة مرة أخرى.');
                 } else {
-                    setError(err.message || 'حدث خطأ غير متوقع');
+                    setError(err.message || 'فشل في تحميل المقالات');
                 }
                 console.error('Error fetching blogs:', err);
             } finally {
